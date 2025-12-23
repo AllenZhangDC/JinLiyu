@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemoyne KOBE KOI | Premium Koi & Water Garden Experts</title>
+    <meta name="description"
+        content="Lemoyne's premier destination for high-quality Koi fish, water gardens, and pond maintenance services. Shop live fish or book maintenance today.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand-group">
+                <a href="#" class="logo">
+                    <img src="assets/images/Logo.jpg" alt="Lemoyne KOBE KOI Logo">
+                    <div class="brand-info">
+                        <span class="brand-name">Lemoyne KOBE KOI</span>
+                        <div class="brand-contact-mini">
+                            <span><i class="fa-solid fa-phone"></i> (555) 123-4567</span>
+                            <span><i class="fa-solid fa-envelope"></i> contact@kobekoi.com</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="dropdown">
+                        <a href="#services" class="nav-link dropbtn">Services <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.7em;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#services"><i class="fa-solid fa-water"></i> Pond Cleaning</a>
+                            <a href="#services"><i class="fa-solid fa-pump-soap"></i> Pump & Filter</a>
+                            <a href="#services"><i class="fa-solid fa-stethoscope"></i> Fish Health</a>
+                            <a href="#services"><i class="fa-solid fa-seedling"></i> Garden Design</a>
+                        </div>
+                    </li>
+
+                    <li><a href="#shop" class="nav-link">Shop Live Fish</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-button">Contact Us</a></li>
+                    <li><a href="#login" class="nav-link login-link"><i class="fa-regular fa-user"></i>
+                            Login/Register</a></li>
+
+                    <!-- Language Switcher -->
+                    <li class="lang-switch-item">
+                        <a href="javascript:void(0)" class="nav-link lang-switch" id="lang-toggle">
+                            <i class="fa-solid fa-globe"></i> <span id="current-lang">EN</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="video-overlay"></div>
+        <!-- Placeholder for video background. User can replace 'assets/videos/hero_video.mp4' with their actual video file. -->
+        <iframe class="back-video"
+            src="https://www.youtube.com/embed/4oO41Qursn0?autoplay=1&mute=1&loop=1&playlist=4oO41Qursn0&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+
+        <div class="hero-content">
+            <h1>Lemoyne's Exclusive Live Koi Specialist<br> <span class="text-sm">| On-Site Water Testing</span></h1>
+            <p>We don't just sell fish. We curate life for your aquatic sanctuary.</p>
+            <div class="hero-btns">
+                <a href="#shop" class="btn btn-primary shop-trigger"><i class="fa-solid fa-fish"></i> Shop Live Fish</a>
+                <a href="#service-check" class="btn btn-secondary"><i class="fa-solid fa-magnifying-glass-location"></i>
+                    Check Service Area</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Area Checker -->
+    <section id="service-check" class="service-check-section">
+        <div class="container">
+            <div class="check-box">
+                <h2>Check Service Availability</h2>
+                <p>We provide premium onsite services within a 1-hour active range of Lemoyne. Enter your Zip Code to
+                    see if we cover your area.</p>
+                <div class="input-group">
+                    <input type="text" id="zip-code" placeholder="Enter Zip Code (e.g. 17043)" maxlength="5">
+                    <button id="check-btn" class="btn btn-primary">Check Availability</button>
+                </div>
+                <div id="check-result" class="result-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Services</h2>
+                <p>From tank cleaning to complete pond ecosystem management.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3>Pond Cleaning & Maintenance</h3>
+                    <p>Complete cleaning, water changing, and filtration system optimization for crystal clear water.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-pump-soap"></i>
+                    </div>
+                    <h3>Pump & Filter Service</h3>
+                    <p>Professional maintenance and repair of fish pumps and biological filters to ensure longevity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3>Fish Health & Selection</h3>
+                    <p>Expert advice on selecting the right Koi for your pond and consultancy on fish health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3>Water Garden Design</h3>
+                    <p>Integration of aquatic plants and flowers to create a balanced, beautiful ecosystem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section" style="background-color: #f4f4f4;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Living Gallery</h2>
+                <p>A glimpse into the vibrant life we bring to your ponds.</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- 1. Kohaku (Existing Closeup) -->
+                <div class="gallery-item">
+                    <img src="assets/images/koi_closeup.png" alt="Kohaku Koi">
+                    <div class="gallery-overlay">
+                        <h4>Gosanke</h4>
+                        <h3>Kohaku</h3>
+                        <p>The classic beauty. Pure snow-white body with vibrant hi (red) markings.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Showa (New) -->
+                <div class="gallery-item">
+                    <img src="assets/images/koi_showa.png" alt="Showa Sanshoku">
+                    <div class="gallery-overlay">
+                        <h4>Utsurimono</h4>
+                        <h3>Showa Sanshoku</h3>
+                        <p>A stunning jet-black body adorned with dynamic red and white patterns.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sanke (New) -->
+                <div class="gallery-item">
+                    <img src="assets/images/koi_sanke.png" alt="Taisho Sanke">
+                    <div class="gallery-overlay">
+                        <h4>Gosanke</h4>
+                        <h3>Taisho Sanke</h3>
+                        <p>Elegant white base pattern accented with red and delicate sumi (black).</p>
+                    </div>
+                </div>
+
+                <!-- 4. Water Lily (Existing) -->
+                <div class="gallery-item">
+                    <img src="assets/images/water_lily.png" alt="Pink Water Lily">
+                    <div class="gallery-overlay">
+                        <h4>Aquatic Flora</h4>
+                        <h3>Royal Water Lily</h3>
+                        <p>Blooming aquatic plants that provide shade and balance your pond's ecosystem.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Pond Landscape (Existing Hero) -->
+                <div class="gallery-item">
+                    <img src="assets/images/hero_bg.png" alt="Pond Landscape">
+                    <div class="gallery-overlay">
+                        <h4>Design</h4>
+                        <h3>Serene Landscape</h3>
+                        <p>Custom-designed water gardens tailored to your backyard's calming atmosphere.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Water Quality (Blue Water Effect) -->
+                <div class="gallery-item blue-water-item">
+                    <!-- Reusing caustics but with CSS background color to make it look like clear blue water -->
+                    <img src="assets/images/water_caustics.png" alt="Crystal Clear Water" class="water-texture">
+                    <div class="gallery-overlay">
+                        <h4>Maintenance</h4>
+                        <h3>Pristine Water</h3>
+                        <p>Advanced crystal-clear water filtration services for healthy, happy Koi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Highlight / "About" Snippet using the Logo and Flower/Fish theme -->
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-image composite-image">
+                <img src="assets/images/water_lily.png" alt="Water Lily" class="base-img">
+                <div class="floating-logo">
+                    <img src="assets/images/Logo.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>We Are Lemoyne KOBE KOI</h2>
+                <p>Based in the heart of Lemoyne, we specialize in high-quality Japanese Koi and aquatic flora. Our
+                    passion is to help you build and maintain the aquatic paradise of your dreams.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> <strong>Exquisite Koi:</strong> Hand-picked for color and
+                        health.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Lush Flora:</strong> Aquatic plants that thrive in
+                        your pond.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Expert Care:</strong> 1-hour radius on-site support.
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Lemoyne KOBE KOI</h3>
+                    <p>Your local experts for everything Koi and Water Gardens.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#shop">Shop</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact & Hours</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Lemoyne, PA (1-Hour Radius)</p>
+                    <p><i class="fa-solid fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@kobekoi.com</p>
+
+                    <div class="footer-hours" style="margin-top: 1.5rem;">
+                        <h5
+                            style="color: var(--secondary-color); font-family: var(--font-heading); font-size: 1rem; margin-bottom: 0.5rem;">
+                            Business Hours</h5>
+                        <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 3px;"><strong>Tue - Sat:</strong> 8:00
+                            AM - 6:00 PM</p>
+                        <p style="font-size: 0.9rem; opacity: 0.6;"><strong>Mon & Sun:</strong> Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lemoyne KOBE KOI. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 10-Day Rule Modal -->
+    <div id="modal-rule" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2>For the Dignity of Life</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-question">Do you promise your pond or tank water has been cycled for more than 10 days?
+                </p>
+                <p class="modal-desc">We value the life of every Koi. Introducing fish to uncycled water is fatal.</p>
+                <div class="modal-actions">
+                    <button id="btn-promise" class="btn btn-primary">I Promise, Water is Safe</button>
+                    <a href="#contact" id="btn-consult" class="btn btn-outline-danger">Not Yet, I Need Advice</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
