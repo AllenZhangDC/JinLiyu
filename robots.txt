@@ -1,0 +1,30 @@
+# Robots.txt for Lemoyne KOBE KOI
+# Last Updated: 2025-03-26
+
+# Allow all bots
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /index_zh.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Disallow specific bot types (optional)
+# User-agent: AhrefsBot
+# Disallow: /
+
+# Specify sitemap location
+Sitemap: https://www.kobekoi.com/sitemap.xml
+
+# Crawl delay for resource-heavy bots (optional)
+# User-agent: *
+# Crawl-delay: 1
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /

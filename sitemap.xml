@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- English Version -->
+    <url>
+        <loc>https://www.kobekoi.com/</loc>
+        <lastmod>2025-03-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kobekoi.com/index_zh.html"/>
+    </url>
+
+    <!-- Chinese Version -->
+    <url>
+        <loc>https://www.kobekoi.com/index_zh.html</loc>
+        <lastmod>2025-03-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.kobekoi.com/"/>
+    </url>
+
+    <!-- Service Sections - English -->
+    <url>
+        <loc>https://www.kobekoi.com/#services</loc>
+        <lastmod>2025-03-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kobekoi.com/index_zh.html#services"/>
+    </url>
+
+    <!-- Gallery - English -->
+    <url>
+        <loc>https://www.kobekoi.com/#gallery</loc>
+        <lastmod>2025-03-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kobekoi.com/index_zh.html#gallery"/>
+    </url>
+
+    <!-- Contact - English -->
+    <url>
+        <loc>https://www.kobekoi.com/#contact</loc>
+        <lastmod>2025-03-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kobekoi.com/index_zh.html#contact"/>
+    </url>
+</urlset>

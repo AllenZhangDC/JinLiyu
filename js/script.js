@@ -83,27 +83,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-    // --- Language Switcher Logic (Simple Toggle) ---
+    // --- Language Switcher Logic ---
     const langToggle = document.getElementById('lang-toggle');
     const currentLangSpan = document.getElementById('current-lang');
-    let isEnglish = true;
 
     if (langToggle) {
         langToggle.addEventListener('click', () => {
-            isEnglish = !isEnglish;
-            if (isEnglish) {
-                currentLangSpan.textContent = 'EN';
-                // Logic to switch content to English would go here
-                // For demo purposes, we will just alert or log
-                console.log('Switched to English');
+            // Determine current language based on current page URL
+            const currentUrl = window.location.pathname;
+            const isChineseVersion = currentUrl.includes('index_zh') || currentUrl.includes('zh');
+
+            // Store preference in localStorage
+            if (isChineseVersion) {
+                // Switch to English
+                localStorage.setItem('preferredLanguage', 'en');
+                window.location.href = window.location.origin + '/';
             } else {
-                currentLangSpan.textContent = 'CN';
-                // Logic to switch content to Chinese would go here
-                console.log('Switched to Chinese');
-                alert('Chinese language translation coming soon!'); 
+                // Switch to Chinese
+                localStorage.setItem('preferredLanguage', 'zh');
+                window.location.href = window.location.origin + '/index_zh.html';
             }
         });
     }
+
+    // Auto-redirect based on language preference
+    (function() {
+        const currentUrl = window.location.pathname;
+        const preferredLang = localStorage.getItem('preferredLanguage');
+        const isChineseVersion = currentUrl.includes('index_zh') || currentUrl.includes('zh');
+
+        // If no preference and user is on English page, check browser language
+        if (!preferredLang && !isChineseVersion) {
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('zh')) {
+                localStorage.setItem('preferredLanguage', 'zh');
+                window.location.href = '/index_zh.html';
+            }
+        }
+    })();
 
     // --- 10-Day Rule Modal Logic ---
     const modal = document.getElementById("modal-rule");
