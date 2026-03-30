@@ -791,10 +791,20 @@ footer {
     }
 }
 
-/* Dropdown Menu */
 .dropdown {
     position: relative;
     /* display: inline-block; - managed by flex parent */
+}
+
+/* Invisible bridge to prevent dropdown from disappearing on gap hover */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
 }
 
 .dropdown-content {
