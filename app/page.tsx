@@ -1,87 +1,306 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Navbar from "./components/Navbar";
+import ZipChecker from "./components/ZipChecker";
+import ShopModal from "./components/ShopModal";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Premium Koi Fish for Sale Lemoyne PA | Japanese Koi Breeder & Pond Maintenance",
+  description:
+    "Lemoyne KOBE KOI - Premium Japanese koi fish for sale, pond cleaning, maintenance services, and water garden design. Buy live koi online or book expert on-site support in PA.",
+  keywords:
+    "koi fish for sale, premium koi, japanese koi, koi pond design, pond maintenance, koi dealer, live koi, pond cleaning service, water garden design, koi fish health, Lemoyne PA, kohaku koi, showa sanshoku, taisho sanke",
+  authors: [{ name: "Lemoyne KOBE KOI" }],
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "Premium Koi Fish for Sale Lemoyne PA | Lemoyne KOBE KOI",
+    description:
+      "Premium Japanese koi fish, pond maintenance, and water garden design services in Lemoyne, Pennsylvania.",
+    url: "https://lemoynekobekois.com",
+    siteName: "Lemoyne KOBE KOI",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Koi Fish for Sale - Lemoyne KOBE KOI",
+    description:
+      "Japanese koi fish sales, pond maintenance, and water garden design in Lemoyne, PA.",
+  },
+  alternates: {
+    canonical: "https://lemoynekobekois.com/",
+    languages: {
+      en: "https://lemoynekobekois.com/",
+      "zh-CN": "https://lemoynekobekois.com/zh",
+    },
+  },
+};
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Lemoyne KOBE KOI",
+    image: "https://lemoynekobekois.com/images/Logo.jpg",
+    description:
+      "Premium Japanese Koi fish sales, pond maintenance, and water garden design services.",
+    url: "https://lemoynekobekois.com",
+    telephone: "(555) 123-4567",
+    email: "contact@kobekoi.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "825 Market Street",
+      addressLocality: "Lemoyne",
+      addressRegion: "PA",
+      postalCode: "17043",
+      addressCountry: "US",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+    ],
+    priceRange: "$$",
+    areaServed: {
+      "@type": "City",
+      name: "Lemoyne",
+      address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "US" },
+    },
+    sameAs: ["https://www.facebook.com", "https://www.instagram.com"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Koi Fish Sales & Pond Maintenance",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Lemoyne KOBE KOI",
+      url: "https://lemoynekobekois.com",
+    },
+    description:
+      "Premium Japanese Koi fish sales, pond cleaning, pump and filter maintenance, fish health consultancy, and water garden design services.",
+    serviceType: "Aquatic Services",
+    areaServed: { "@type": "City", name: "Lemoyne" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Lemoyne KOBE KOI",
+    url: "https://lemoynekobekois.com",
+    logo: "https://lemoynekobekois.com/images/Logo.jpg",
+    description:
+      "Premium Japanese Koi specialist and aquatic services provider in Lemoyne, Pennsylvania",
+    foundingDate: "2020",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      telephone: "(555) 123-4567",
+      email: "contact@kobekoi.com",
+    },
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-      <footer className="absolute bottom-4 text-center w-full text-sm text-zinc-400 dark:text-zinc-600">
-        <p>
-          Developed by{" "}
-          <a
-            href="https://puredigits.us"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors font-medium"
-          >
-            Pure Digits Inc.
-          </a>
-          {" "}|{" "}
-          <a
-            href="https://puredigits.us"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors"
-          >
-            PureDigits.us
-          </a>
-        </p>
-      </footer>
-    </div>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        {jsonLd.map((data, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+          />
+        ))}
+      </head>
+      <body>
+        <Navbar lang="en" />
+
+        {/* Hero Section */}
+        <header id="home" className="hero">
+          <div className="video-overlay"></div>
+          <iframe
+            className="back-video"
+            src="https://www.youtube.com/embed/4oO41Qursn0?autoplay=1&mute=1&loop=1&playlist=4oO41Qursn0&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+          <div className="hero-content">
+            <h1>
+              Lemoyne&apos;s Exclusive Live Koi Specialist
+              <br />
+              <span className="text-sm">| On-Site Water Testing</span>
+            </h1>
+            <p>We don&apos;t just sell fish. We curate life for your aquatic sanctuary.</p>
+            <div className="hero-btns">
+              <a href="#shop" className="btn btn-primary shop-trigger">
+                <i className="fa-solid fa-fish"></i> Shop Live Fish
+              </a>
+              <a href="#service-check" className="btn btn-secondary">
+                <i className="fa-solid fa-magnifying-glass-location"></i> Check Service Area
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <ZipChecker lang="en" />
+
+        {/* Services Section */}
+        <section id="services" className="section">
+          <div className="container">
+            <div className="section-title">
+              <h2>Our Premium Services</h2>
+              <p>From tank cleaning to complete pond ecosystem management.</p>
+            </div>
+            <div className="services-grid">
+              <div className="service-card">
+                <div className="icon-box"><i className="fa-solid fa-water"></i></div>
+                <h3>Pond Cleaning &amp; Maintenance</h3>
+                <p>Complete cleaning, water changing, and filtration system optimization for crystal clear water.</p>
+              </div>
+              <div className="service-card">
+                <div className="icon-box"><i className="fa-solid fa-pump-soap"></i></div>
+                <h3>Pump &amp; Filter Service</h3>
+                <p>Professional maintenance and repair of fish pumps and biological filters to ensure longevity.</p>
+              </div>
+              <div className="service-card">
+                <div className="icon-box"><i className="fa-solid fa-stethoscope"></i></div>
+                <h3>Fish Health &amp; Selection</h3>
+                <p>Expert advice on selecting the right Koi for your pond and consultancy on fish health.</p>
+              </div>
+              <div className="service-card">
+                <div className="icon-box"><i className="fa-solid fa-seedling"></i></div>
+                <h3>Water Garden Design</h3>
+                <p>Integration of aquatic plants and flowers to create a balanced, beautiful ecosystem.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section id="gallery" className="section" style={{ backgroundColor: "#f4f4f4" }}>
+          <div className="container">
+            <div className="section-title">
+              <h2>Our Living Gallery</h2>
+              <p>A glimpse into the vibrant life we bring to your ponds.</p>
+            </div>
+            <div className="gallery-grid">
+              <div className="gallery-item">
+                <Image src="/images/koi_closeup.png" alt="Kohaku Koi" fill style={{ objectFit: "cover" }} />
+                <div className="gallery-overlay">
+                  <h4>Gosanke</h4><h3>Kohaku</h3>
+                  <p>The classic beauty. Pure snow-white body with vibrant hi (red) markings.</p>
+                </div>
+              </div>
+              <div className="gallery-item">
+                <Image src="/images/koi_showa.png" alt="Showa Sanshoku" fill style={{ objectFit: "cover" }} />
+                <div className="gallery-overlay">
+                  <h4>Utsurimono</h4><h3>Showa Sanshoku</h3>
+                  <p>A stunning jet-black body adorned with dynamic red and white patterns.</p>
+                </div>
+              </div>
+              <div className="gallery-item">
+                <Image src="/images/koi_sanke.png" alt="Taisho Sanke" fill style={{ objectFit: "cover" }} />
+                <div className="gallery-overlay">
+                  <h4>Gosanke</h4><h3>Taisho Sanke</h3>
+                  <p>Elegant white base pattern accented with red and delicate sumi (black).</p>
+                </div>
+              </div>
+              <div className="gallery-item">
+                <Image src="/images/water_lily.png" alt="Pink Water Lily" fill style={{ objectFit: "cover" }} />
+                <div className="gallery-overlay">
+                  <h4>Aquatic Flora</h4><h3>Royal Water Lily</h3>
+                  <p>Blooming aquatic plants that provide shade and balance your pond&apos;s ecosystem.</p>
+                </div>
+              </div>
+              <div className="gallery-item">
+                <Image src="/images/hero_bg.png" alt="Pond Landscape" fill style={{ objectFit: "cover" }} />
+                <div className="gallery-overlay">
+                  <h4>Design</h4><h3>Serene Landscape</h3>
+                  <p>Custom-designed water gardens tailored to your backyard&apos;s calming atmosphere.</p>
+                </div>
+              </div>
+              <div className="gallery-item blue-water-item">
+                <Image src="/images/water_caustics.png" alt="Crystal Clear Water" fill style={{ objectFit: "cover" }} className="water-texture" />
+                <div className="gallery-overlay">
+                  <h4>Maintenance</h4><h3>Pristine Water</h3>
+                  <p>Advanced crystal-clear water filtration services for healthy, happy Koi.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="about-section">
+          <div className="container about-grid">
+            <div className="about-image composite-image">
+              <Image src="/images/water_lily.png" alt="Water Lily" width={600} height={400} className="base-img" />
+              <div className="floating-logo">
+                <Image src="/images/Logo.jpg" alt="Logo" width={90} height={90} />
+              </div>
+            </div>
+            <div className="about-text">
+              <h2>We Are Lemoyne KOBE KOI</h2>
+              <p>Based in the heart of Lemoyne, we specialize in high-quality Japanese Koi and aquatic flora. Our passion is to help you build and maintain the aquatic paradise of your dreams.</p>
+              <ul className="feature-list">
+                <li><i className="fa-solid fa-check"></i> <strong>Exquisite Koi:</strong> Hand-picked for color and health.</li>
+                <li><i className="fa-solid fa-check"></i> <strong>Lush Flora:</strong> Aquatic plants that thrive in your pond.</li>
+                <li><i className="fa-solid fa-check"></i> <strong>Expert Care:</strong> 1-hour radius on-site support.</li>
+              </ul>
+              <a href="#contact" className="btn btn-outline">Contact Us</a>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer id="contact">
+          <div className="container">
+            <div className="footer-content">
+              <div className="footer-brand">
+                <h3>Lemoyne KOBE KOI</h3>
+                <p>Your local experts for everything Koi and Water Gardens.</p>
+              </div>
+              <div className="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#shop">Shop</a>
+              </div>
+              <div className="footer-contact">
+                <h4>Contact &amp; Hours</h4>
+                <p><i className="fa-solid fa-location-dot"></i> 825 Market Street, Lemoyne, PA 17043</p>
+                <p><i className="fa-solid fa-phone"></i> (555) 123-4567</p>
+                <p><i className="fa-solid fa-envelope"></i> contact@kobekoi.com</p>
+                <div className="footer-hours" style={{ marginTop: "1.5rem" }}>
+                  <h5 style={{ color: "var(--secondary-color)", fontFamily: "var(--font-heading)", fontSize: "1rem", marginBottom: "0.5rem" }}>Business Hours</h5>
+                  <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Tue - Sat:</strong> 8:00 AM - 6:00 PM</p>
+                  <p style={{ fontSize: "0.9rem", opacity: 0.6 }}><strong>Mon &amp; Sun:</strong> Closed</p>
+                </div>
+              </div>
+            </div>
+            <div className="footer-bottom">
+              <p>&copy; 2025 Lemoyne KOBE KOI. All Rights Reserved.</p>
+            </div>
+          </div>
+        </footer>
+
+        <ShopModal lang="en" />
+      </body>
+    </html>
   );
 }
