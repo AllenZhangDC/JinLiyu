@@ -72,7 +72,6 @@ export default function Navbar({ lang }: NavbarProps) {
               <span className="brand-name">Lemoyne KOBE KOI</span>
               <div className="brand-contact-mini">
                 <span><i className="fa-solid fa-location-dot"></i> {t.addressLabel}</span>
-                <span><i className="fa-solid fa-envelope"></i> {t.emailLabel}</span>
               </div>
             </div>
           </a>
