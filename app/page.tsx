@@ -260,8 +260,8 @@ export default function HomePage() {
               <p><i className="fa-solid fa-language"></i> English and Chinese support available</p>
               <div className="footer-hours" style={{ marginTop: "1.5rem" }}>
                 <h5 style={{ color: "var(--secondary-color)", fontFamily: "var(--font-heading)", fontSize: "1rem", marginBottom: "0.5rem" }}>Business Hours</h5>
-                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Tue - Sat:</strong> 8:00 AM - 6:00 PM</p>
-                <p style={{ fontSize: "0.9rem", opacity: 0.6 }}><strong>Mon &amp; Sun:</strong> Closed</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Mon - Sat:</strong> 8:00 AM - 6:00 PM</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.6 }}><strong>Sun:</strong> Closed</p>
               </div>
             </div>
           </div>
