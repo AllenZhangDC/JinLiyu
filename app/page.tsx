@@ -44,8 +44,7 @@ const jsonLd = [
     description:
       "Premium Japanese Koi fish sales, pond maintenance, and water garden design services.",
     url: "https://lemoynekobekois.com",
-    telephone: "(555) 123-4567",
-    email: "contact@kobekoi.com",
+    email: "lemoynekobekois@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "825 Market Street",
@@ -54,21 +53,12 @@ const jsonLd = [
       postalCode: "17043",
       addressCountry: "US",
     },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "08:00",
-        closes: "18:00",
-      },
-    ],
     priceRange: "$$",
     areaServed: {
       "@type": "City",
       name: "Lemoyne",
       address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "US" },
     },
-    sameAs: ["https://www.facebook.com", "https://www.instagram.com"],
   },
   {
     "@context": "https://schema.org",
@@ -90,15 +80,9 @@ const jsonLd = [
     name: "Lemoyne KOBE KOI",
     url: "https://lemoynekobekois.com",
     logo: "https://lemoynekobekois.com/images/Logo.jpg",
+    email: "lemoynekobekois@gmail.com",
     description:
       "Premium Japanese Koi specialist and aquatic services provider in Lemoyne, Pennsylvania",
-    foundingDate: "2020",
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "Customer Service",
-      telephone: "(555) 123-4567",
-      email: "contact@kobekoi.com",
-    },
   },
 ];
 
@@ -272,8 +256,8 @@ export default function HomePage() {
             <div className="footer-contact">
               <h4>Contact &amp; Hours</h4>
               <p><i className="fa-solid fa-location-dot"></i> 825 Market Street, Lemoyne, PA 17043</p>
-              <p><i className="fa-solid fa-phone"></i> (555) 123-4567</p>
-              <p><i className="fa-solid fa-envelope"></i> contact@kobekoi.com</p>
+              <p><i className="fa-solid fa-envelope"></i> lemoynekobekois@gmail.com</p>
+              <p><i className="fa-solid fa-language"></i> English and Chinese support available</p>
               <div className="footer-hours" style={{ marginTop: "1.5rem" }}>
                 <h5 style={{ color: "var(--secondary-color)", fontFamily: "var(--font-heading)", fontSize: "1rem", marginBottom: "0.5rem" }}>Business Hours</h5>
                 <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Tue - Sat:</strong> 8:00 AM - 6:00 PM</p>

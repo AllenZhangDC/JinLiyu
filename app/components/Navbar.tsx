@@ -22,6 +22,8 @@ const translations = {
     loginRegister: 'Login/Register',
     langLabel: 'EN',
     langSwitchUrl: '/zh',
+    addressLabel: '825 Market Street, Lemoyne, PA 17043',
+    emailLabel: 'lemoynekobekois@gmail.com',
   },
   zh: {
     home: '首页',
@@ -36,6 +38,8 @@ const translations = {
     loginRegister: '登录/注册',
     langLabel: '中文',
     langSwitchUrl: '/',
+    addressLabel: '825 Market Street, Lemoyne, PA 17043',
+    emailLabel: 'lemoynekobekois@gmail.com',
   },
 };
 
@@ -67,8 +71,8 @@ export default function Navbar({ lang }: NavbarProps) {
             <div className="brand-info">
               <span className="brand-name">Lemoyne KOBE KOI</span>
               <div className="brand-contact-mini">
-                <span><i className="fa-solid fa-phone"></i> (555) 123-4567</span>
-                <span><i className="fa-solid fa-envelope"></i> contact@kobekoi.com</span>
+                <span><i className="fa-solid fa-location-dot"></i> {t.addressLabel}</span>
+                <span><i className="fa-solid fa-envelope"></i> {t.emailLabel}</span>
               </div>
             </div>
           </a>

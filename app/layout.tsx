@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lemoynekobekois.com"),
+  title: "Lemoyne KOBE KOI",
+  description:
+    "Japanese koi sales, pond maintenance, and water garden design in Lemoyne, Pennsylvania.",
+  applicationName: "Lemoyne KOBE KOI",
   icons: {
     icon: "/images/Logo.jpg",
     apple: "/images/Logo.jpg",
