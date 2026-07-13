@@ -239,11 +239,18 @@ export default function ZhHomePage() {
               <h4>联系方式 &amp; 营业时间</h4>
               <p><i className="fa-solid fa-location-dot"></i> 825 Market Street, Lemoyne, PA 17043</p>
               <p><i className="fa-solid fa-envelope"></i> lemoynekobekois@gmail.com</p>
+              <p><i className="fa-solid fa-phone"></i> 电话: (717) 979-2368</p>
+              <p><i className="fa-solid fa-comment-dots"></i> 可电话或短信联系</p>
               <p><i className="fa-solid fa-language"></i> 提供中英文沟通支持</p>
               <div className="footer-hours" style={{ marginTop: "1.5rem" }}>
                 <h5 style={{ color: "var(--secondary-color)", fontFamily: "var(--font-heading)", fontSize: "1rem", marginBottom: "0.5rem" }}>营业时间</h5>
-                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周一 - 周六：</strong> 上午8:00 - 下午6:00</p>
-                <p style={{ fontSize: "0.9rem", opacity: 0.6 }}><strong>周日：</strong> 休息</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周一：</strong> 上午11:00 - 下午4:00</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周二：</strong> 休息</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周三：</strong> 上午11:00 - 下午4:00</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周四：</strong> 上午11:00 - 下午4:00</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周五：</strong> 上午11:00 - 下午4:00</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>周六：</strong> 上午11:00 - 下午4:00</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8 }}><strong>周日：</strong> 上午11:00 - 下午4:00</p>
               </div>
             </div>
           </div>

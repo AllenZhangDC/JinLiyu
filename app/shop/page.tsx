@@ -63,6 +63,10 @@ interface Product {
 }
 
 const allProducts: Product[] = [
+  { id: 21, name: "Elite Showa & Kohaku Select", variety: "Showa", breeder: "KOBE KOI", price: 320, category: "KOI VARIETY", image: "/images/koi-new-1.png", tag: "PREMIUM" },
+  { id: 22, name: "Vibrant Orange Ogon Collection", variety: "Ogon", breeder: "KOBE KOI", price: 150, category: "KOI VARIETY", image: "/images/koi-new-2.jpg", tag: "PREMIUM" },
+  { id: 23, name: "Premium Metallic Ginrin Set", variety: "Ogon", breeder: "KOBE KOI", price: 240, category: "KOI VARIETY", image: "/images/koi-new-3.jpg", tag: "PREMIUM" },
+  { id: 24, name: "Grand Champion Line Kohaku Trio", variety: "Kohaku", breeder: "KOBE KOI", price: 580, category: "KOI VARIETY", image: "/images/koi-new-4.jpg", tag: "PREMIUM" },
   // Koi fish
   { id: 1, name: "Kohaku by Dainichi (35cm)", variety: "Kohaku", breeder: "Dainichi", price: 850, category: "KOI VARIETY", image: "/assets/images/koi_closeup.png", tag: "NEW" },
   { id: 2, name: "Showa Sanshoku by Isa (42cm)", variety: "Showa", breeder: "Isa", price: 1200, category: "KOI VARIETY", image: "/assets/images/koi_showa.png", tag: "NEW" },

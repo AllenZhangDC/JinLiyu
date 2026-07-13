@@ -136,29 +136,25 @@ export default function HomePage() {
         <div className="container">
           <div className="section-title">
             <h2>Our Premium Services</h2>
-            <p>From tank cleaning to complete pond ecosystem management.</p>
+            <p>From expert design to advanced eco-system planning.</p>
           </div>
           <div className="services-grid">
-            <div className="service-card">
-              <div className="icon-box"><i className="fa-solid fa-water"></i></div>
-              <h3>Pond Cleaning &amp; Maintenance</h3>
-              <p>Complete cleaning, water changing, and filtration system optimization for crystal clear water.</p>
-            </div>
-            <div className="service-card">
-              <div className="icon-box"><i className="fa-solid fa-pump-soap"></i></div>
-              <h3>Pump &amp; Filter Service</h3>
-              <p>Professional maintenance and repair of fish pumps and biological filters to ensure longevity.</p>
-            </div>
-            <div className="service-card">
+            <article className="service-card">
+              <div className="icon-box"><i className="fa-solid fa-water-ladder"></i></div>
+              <h3>Custom Aquascaping Design</h3>
+              <p>Tailored 2D/3D design layouts and structural blueprint planning for your aquarium, delivering professional aesthetics remotely without the need for an on-site visit.</p>
+            </article>
+            <article className="service-card">
+              <div className="icon-box"><i className="fa-solid fa-gears"></i></div>
+              <span className="service-badge">Local Service</span>
+              <h3>On-Site Filtration &amp; Water Cycle Installation</h3>
+              <p>Professional on-site setup of advanced water filtration and circulation systems to ensure optimal oxygen levels and a thriving, crystal-clear environment.</p>
+            </article>
+            <article className="service-card">
               <div className="icon-box"><i className="fa-solid fa-stethoscope"></i></div>
-              <h3>Fish Health &amp; Selection</h3>
-              <p>Expert advice on selecting the right Koi for your pond and consultancy on fish health.</p>
-            </div>
-            <div className="service-card">
-              <div className="icon-box"><i className="fa-solid fa-seedling"></i></div>
-              <h3>Water Garden Design</h3>
-              <p>Integration of aquatic plants and flowers to create a balanced, beautiful ecosystem.</p>
-            </div>
+              <h3>Virtual Koi Selection &amp; Consultation</h3>
+              <p>Expert remote assistance to help you select premium-grade Koi via high-definition previews, combined with online guidance for quarantine and care protocols.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -171,6 +167,34 @@ export default function HomePage() {
             <p>A glimpse into the vibrant life we bring to your ponds.</p>
           </div>
           <div className="gallery-grid">
+            <div className="gallery-item">
+              <Image src="/images/koi-new-1.png" alt="Elite Showa and Kohaku Select" fill style={{ objectFit: "cover" }} />
+              <div className="gallery-overlay">
+                <h4>Premium Koi</h4><h3>Elite Showa &amp; Kohaku Select</h3>
+                <p>Hand-selected premium koi with refined pattern balance and vivid coloration.</p>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <Image src="/images/koi-new-2.jpg" alt="Vibrant Orange Ogon Collection" fill style={{ objectFit: "cover" }} />
+              <div className="gallery-overlay">
+                <h4>Ogon</h4><h3>Vibrant Orange Ogon Collection</h3>
+                <p>Radiant orange koi chosen for bold presence and lively pond movement.</p>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <Image src="/images/koi-new-3.jpg" alt="Premium Metallic Ginrin Set" fill style={{ objectFit: "cover" }} />
+              <div className="gallery-overlay">
+                <h4>Ginrin</h4><h3>Premium Metallic Ginrin Set</h3>
+                <p>Shimmering metallic scale texture that catches light beautifully in clear water.</p>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <Image src="/images/koi-new-4.jpg" alt="Grand Champion Line Kohaku Trio" fill style={{ objectFit: "cover" }} />
+              <div className="gallery-overlay">
+                <h4>Kohaku</h4><h3>Grand Champion Line Kohaku Trio</h3>
+                <p>Elegant Kohaku trio with classic white ground and strong red markings.</p>
+              </div>
+            </div>
             <div className="gallery-item">
               <Image src="/images/koi_closeup.png" alt="Kohaku Koi" fill style={{ objectFit: "cover" }} />
               <div className="gallery-overlay">
@@ -257,11 +281,18 @@ export default function HomePage() {
               <h4>Contact &amp; Hours</h4>
               <p><i className="fa-solid fa-location-dot"></i> 825 Market Street, Lemoyne, PA 17043</p>
               <p><i className="fa-solid fa-envelope"></i> lemoynekobekois@gmail.com</p>
+              <p><i className="fa-solid fa-phone"></i> Phone: (717) 979-2368</p>
+              <p><i className="fa-solid fa-comment-dots"></i> Call or Text</p>
               <p><i className="fa-solid fa-language"></i> English and Chinese support available</p>
               <div className="footer-hours" style={{ marginTop: "1.5rem" }}>
                 <h5 style={{ color: "var(--secondary-color)", fontFamily: "var(--font-heading)", fontSize: "1rem", marginBottom: "0.5rem" }}>Business Hours</h5>
-                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Mon - Sat:</strong> 8:00 AM - 6:00 PM</p>
-                <p style={{ fontSize: "0.9rem", opacity: 0.6 }}><strong>Sun:</strong> Closed</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Monday:</strong> 11 AM - 4 PM</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Tuesday:</strong> Closed</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Wednesday:</strong> 11 AM - 4 PM</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Thursday:</strong> 11 AM - 4 PM</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Friday:</strong> 11 AM - 4 PM</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "3px" }}><strong>Saturday:</strong> 11 AM - 4 PM</p>
+                <p style={{ fontSize: "0.9rem", opacity: 0.8 }}><strong>Sunday:</strong> 11 AM - 4 PM</p>
               </div>
             </div>
           </div>
